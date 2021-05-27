@@ -5,7 +5,7 @@ const { animals } = require('../../data/animals');
 router.get('/animals', (req, res) => {
   let results = animals;
   if (req.query) {
-    let results = filterByQuery(req.query, animals);
+    results = filterByQuery(req.query, animals);
   }
   res.json(results);
 });

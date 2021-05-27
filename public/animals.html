@@ -13,7 +13,7 @@
 <body>
   <header class="py-4 mb-3">
     <div class="flex-row justify-space-between align-center container-fluid mx-auto">
-      <h1 class="text-light bg-dark p-3">Zoo Keepr</h1>
+      <h1 class="text-light bg-dark p-3"><a href="/">Zoo Keepr</a></h1>
       <h3 class="text-light bg-dark p-3">A Zoo Animal Catalog</h3>
     </div>
   </header>
@@ -31,6 +31,10 @@
       <div class="col-12 col-lg-3 bg-dark p-3">
         <h3 class="text-light">Filter Your Search.</h3>
         <form id="animals-form">
+          <label for="name-input" class="form-label">Animal name</label>
+          <input name="name" id="name-input" class="form-input" />
+          <label for="species-input" class="form-label">Animal species</label>
+          <input name="species" id="species-input" class="form-input" />
           <label for="diet-input" class="form-label">Diet</label>
           <div class="flex-row justify-center">
             <div class="col-auto mb-2">

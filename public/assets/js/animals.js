@@ -38,7 +38,7 @@ const getAnimals = (formData = {}) => {
       return response.json();
     })
     .then(animalData => {
-      console.log(animalData);
+      console.log('egg', animalData);
       printResults(animalData);
     });
 
@@ -59,6 +59,12 @@ const handleGetAnimalsSubmit = event => {
     diet = '';
   }
 
+  const nameHTML = $animalForm.querySelector('[name="name"]');
+  const name = nameHTML.value;
+
+  const speciesHTML = $animalForm.querySelector('[name="species"]');
+  const species = speciesHTML.value;
+
   const personalityTraitArr = [];
   const selectedTraits = $animalForm.querySelector('[name="personality"').selectedOptions;
 
@@ -68,7 +74,7 @@ const handleGetAnimalsSubmit = event => {
 
   const personalityTraits = personalityTraitArr.join(',');
 
-  const animalObject = { diet, personalityTraits };
+  const animalObject = { name, species, diet, personalityTraits };
 
   getAnimals(animalObject);
 };

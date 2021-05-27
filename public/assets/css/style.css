@@ -74,6 +74,10 @@ a {
   text-decoration: none;
 }
 
+a:visited {
+  color: var(--light);
+}
+
 header {
   background-color: var(--primary);
   background-image: url('../images/header-bg.jpg');
